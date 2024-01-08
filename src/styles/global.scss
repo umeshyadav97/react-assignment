@@ -1,6 +1,70 @@
-@import "./variables.scss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: #ffffff;
+}
+
+body[data-theme="dark"] {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../assets/font/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "poppins medium";
+  src: url(../assets/font/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "poppins semibold";
+  src: url(../assets/font/poppins/Poppins-SemiBold.ttf);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
 
 html,
-body {
-  background-color: $background-color;
+body,
+div {
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dcdcdc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1C4980;
+  border-radius: 5px;
 }
