@@ -60,7 +60,11 @@ const NewAssesment = () => {
                   <img src={ChatIcon} />
                 </Grid>
                 <Grid item xs={6} display="flex" justifyContent="end">
-                  <img src={TripleDot} />
+                  <img
+                    src={TripleDot}
+                    alt="img"
+                    style={{ height: "30px", width: "30px" }}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -69,7 +73,9 @@ const NewAssesment = () => {
               <Grid item sx={{ borderBottom: "1px dashed #DADCE0" }}>
                 <Grid container spacing={2} pt={1} pb={2}>
                   <Grid item display="flex" alignItems="center">
-                    <Typography variant="h1">Job</Typography>
+                    <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                      Job
+                    </Typography>
                   </Grid>
                   <Grid
                     item
@@ -90,12 +96,20 @@ const NewAssesment = () => {
                 <Grid item xs={6}>
                   <Grid container spacing={2}>
                     <Grid item>
-                      <Typography variant="h1">00</Typography>
-                      <Typography variant="h1">Duration</Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        00
+                      </Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        Duration
+                      </Typography>
                     </Grid>
                     <Grid item>
-                      <Typography variant="h1">00</Typography>
-                      <Typography variant="h1">Questions</Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        00
+                      </Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        Questions
+                      </Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -126,7 +140,11 @@ const NewAssesment = () => {
                   <img src={ChatIcon} />
                 </Grid>
                 <Grid item xs={6} display="flex" justifyContent="end">
-                  <img src={TripleDot} />
+                  <img
+                    src={TripleDot}
+                    alt="img"
+                    style={{ height: "30px", width: "30px" }}
+                  />
                 </Grid>
               </Grid>
               <Grid item>
@@ -135,7 +153,9 @@ const NewAssesment = () => {
               <Grid item sx={{ borderBottom: "1px dashed #DADCE0" }}>
                 <Grid container spacing={2} pt={1} pb={2}>
                   <Grid item display="flex" alignItems="center">
-                    <Typography variant="h1">Job</Typography>
+                    <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                      Job
+                    </Typography>
                   </Grid>
                   <Grid
                     item
@@ -156,12 +176,20 @@ const NewAssesment = () => {
                 <Grid item xs={6}>
                   <Grid container spacing={2}>
                     <Grid item>
-                      <Typography variant="h1">00</Typography>
-                      <Typography variant="h1">Duration</Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        00
+                      </Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        Duration
+                      </Typography>
                     </Grid>
                     <Grid item>
-                      <Typography variant="h1">00</Typography>
-                      <Typography variant="h1">Questions</Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        00
+                      </Typography>
+                      <Typography variant="h1" sx={{ color: "#1C4980" }}>
+                        Questions
+                      </Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -192,6 +220,7 @@ const NewAssesment = () => {
         open={openForm}
         handleClose={handleChange}
         title="Create new assessment"
+        size="sm"
       />
     </React.Fragment>
   );

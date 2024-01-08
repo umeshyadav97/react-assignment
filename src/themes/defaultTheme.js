@@ -45,9 +45,9 @@ export const defaultTheme = {
       fontWeight: 500,
     },
     h5: {
-      fontSize: 18,
-      lineHeight: 32 / 20,
-      fontWeight: 400,
+      fontSize: 16,
+      lineHeight: 14 / 14,
+      fontWeight: 600,
     },
     h6: {
       fontSize: 13,

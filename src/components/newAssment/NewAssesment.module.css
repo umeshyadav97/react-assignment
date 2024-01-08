@@ -1,12 +1,12 @@
 .text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #1c4980;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #1c4980 !important;
 }
 .subText {
-  font-size: 12px;
-  font-weight: 500;
-  color: #1c4980;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #1c4980 !important;
 }
 .dottedBorder {
   border: 1px dashed #dadce0;
@@ -20,9 +20,9 @@
   padding: 20px;
 }
 .dateText {
-  font-size: 12px;
-  font-weight: 500;
-  color: "#8DA4BF";
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: "#8DA4BF" !important;
   padding-left: 10px;
   padding-top: 2px;
 }
@@ -32,9 +32,9 @@
   border-radius: 50px;
 }
 .shareText {
-  font-size: 14px;
-  font-weight: 500;
-  color: #1c4980;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1c4980 !important;
 }
 .pointer{
   cursor: pointer;

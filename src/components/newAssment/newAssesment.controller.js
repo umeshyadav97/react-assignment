@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useNewAssesmentController() {
-     const [openForm, setOpenForm] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
 
   const handleChange = () => {
     setOpenForm(!openForm);
@@ -10,7 +10,8 @@ export function useNewAssesmentController() {
   useEffect(() => {
     console.log("openForm state changed:", openForm);
   }, [openForm]);
-    return {
-        openForm,handleChange
-    }
+  return {
+    openForm,
+    handleChange,
+  };
 }

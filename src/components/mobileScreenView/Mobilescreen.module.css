@@ -1,0 +1,53 @@
+.dottedBorder {
+  border: 1px dashed #dadce0;
+  border-radius: 12px;
+  padding: 10px;
+  background: #f6f8fa;
+}
+.pointer {
+  cursor: pointer;
+}
+.text {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+color: var(--text-100, #1C4980) !important;
+}
+
+.subText {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #1c4980 !important;
+}
+.border {
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+  padding: 10px;
+}
+.dateText {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-50, #8da4bf);
+  padding-left: 10px;
+  padding-top: 2px;
+}
+.jobtext {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--text-100, #1c4980);
+}
+.share {
+  border: 1px solid #1c4980;
+  padding: 5px 15px !important;
+  border-radius: 50px;
+}
+
+.shareText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c4980;
+}
+.menuText{
+font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--text-100, #1c4980);
+}

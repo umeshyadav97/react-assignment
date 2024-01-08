@@ -23,7 +23,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function AddAssesment({ open = false, handleClose, title = "" }) {
+function AddAssesment({ open = false, handleClose, title = "", size }) {
   const styles = useStyles();
 
   const [inputValue, setInputValue] = useState("");
@@ -38,13 +38,12 @@ function AddAssesment({ open = false, handleClose, title = "" }) {
       setInputValue(""); // Clear the input field after storing the value
     }
   };
-  console.log(storedValue);
 
   return (
     <Dialog
       open={open}
       fullWidth
-      maxWidth={"sm"}
+      maxWidth={size}
       TransitionComponent={Transition}
       keepMounted
     >
