@@ -7,9 +7,7 @@ export function useNewAssesmentController() {
     setOpenForm(!openForm);
   };
 
-  useEffect(() => {
-    console.log("openForm state changed:", openForm);
-  }, [openForm]);
+
   return {
     openForm,
     handleChange,

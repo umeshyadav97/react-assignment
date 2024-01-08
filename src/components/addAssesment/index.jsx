@@ -27,18 +27,28 @@ function AddAssesment({ open = false, handleClose, title = "", size }) {
   const styles = useStyles();
 
   const [inputValue, setInputValue] = useState("");
-  const [storedValue, setStoredValue] = useState("");
+  const [storedValues, setStoredValues] = useState([]);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const handleEnterPress = (event) => {
     if (event.key === "Enter") {
-      setStoredValue(inputValue);
-      setInputValue(""); // Clear the input field after storing the value
+      const trimmedValue = inputValue.trim();
+      if (trimmedValue !== "") {
+        setStoredValues((prevValues) => [...prevValues, trimmedValue]);
+        setInputValue("");
+      }
     }
   };
 
+  const handleRemoveValue = (index) => {
+    setStoredValues((prevValues) => {
+      const newValues = [...prevValues];
+      newValues.splice(index, 1);
+      return newValues;
+    });
+  };
   return (
     <Dialog
       open={open}
@@ -46,6 +56,7 @@ function AddAssesment({ open = false, handleClose, title = "", size }) {
       maxWidth={size}
       TransitionComponent={Transition}
       keepMounted
+      onBackdropClick={handleClose}
     >
       <DialogTitle sx={{ borderBottom: "1px solid #DADCE0" }}>
         <Grid container alignItems="center">
@@ -60,8 +71,7 @@ function AddAssesment({ open = false, handleClose, title = "", size }) {
                 onClick={handleClose}
                 sx={{
                   borderRadius: "50%",
-                  border: "1px solid #EAECF0",
-                  backgroundColor: "#FFFFFF",
+                  color: "#1C4980",
                 }}
                 disableRipple
               >
@@ -125,7 +135,42 @@ function AddAssesment({ open = false, handleClose, title = "", size }) {
                 borderTopRightRadius: "8px",
                 borderTopLeftRadius: "8px",
               }}
-            ></Grid>
+            >
+              <Grid container p={1} spacing={1}>
+                {storedValues.map((value, index) => (
+                  <Grid item key={index}>
+                    <Grid
+                      container
+                      alignItems="center"
+                      sx={{
+                        background: "#DDEDFF",
+                        borderRadius: "22px",
+                      }}
+                    >
+                      <Grid item pl={1}>
+                        <Typography
+                          sx={{
+                            fontSize: "12px",
+                            fontWeight: "500",
+                            color: "#1C4980",
+                          }}
+                        >
+                          {value}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <IconButton
+                          onClick={() => handleRemoveValue(index)}
+                          color="primary"
+                        >
+                          <CloseIcon sx={{ height: "10px", width: "10px" }} />
+                        </IconButton>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
             <SkillField
               id="name"
               placeholder="Type here"
@@ -136,17 +181,39 @@ function AddAssesment({ open = false, handleClose, title = "", size }) {
               fullWidth
             />
           </Grid>
+          <Grid item py={2}>
+            <FieldHeading title="Duration of assessment" />
+            <InputField
+              id="name"
+              placeholder="HH:MM:SS"
+              variant="standard"
+              type="number"
+              fullWidth
+            />
+          </Grid>
         </Box>
       </DialogContent>
       <DialogActions>
-        <Box width="100%" display="flex" justifyContent="start" pl={2}>
+        <Box
+          width="100%"
+          display="flex"
+          justifyContent="start"
+          pl={2}
+          sx={{ background: "#fff" }}
+        >
           <Button
             variant="contained"
-            sx={{ padding: "11px 22px" }}
+            sx={{
+              padding: "11px 22px",
+              width: "100%",
+              height: "40px",
+              background: "#0073E6",
+              borderRadius: "8px",
+            }} // Set width to 100%
             // disabled={isButtonDisabled}
             // onClick={() => handleAdd(templateDetail)}
           >
-            Add Note
+            Save
           </Button>
         </Box>
       </DialogActions>
