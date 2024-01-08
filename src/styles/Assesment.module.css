@@ -1,0 +1,50 @@
+.gridStyle {
+  border-right: 2px solid #dadce0;
+  padding-right: 10px;
+}
+.text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c4980;
+}
+.text2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0073e6;
+}
+.hedingText {
+  font-size: 18px;
+  font-family: 500;
+  color: #1c4980;
+}
+.cardborder {
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+}
+.headText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c4980;
+}
+.countText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c4980;
+}
+.greenText {
+  font-size: 12px;
+  font-weight: 500;
+  color: #05c165;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+.subHeading {
+  font-size: 12px;
+  font-family: 500;
+  color: #1c4980;
+}
+.scrollablePaper {
+    overflow-x: scroll; 
+    min-width: 110%;
+    max-width: 110%;
+}

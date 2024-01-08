@@ -5,9 +5,8 @@ import AdminImage from "../../assets/images/admin.svg";
 import { DashboardMenus } from "../../router/routes/dashboardRoutes";
 import { useLocation } from "react-router-dom";
 
-function SideBar({navigate}) {
+function SideBar({ navigate }) {
   const router = useLocation();
- 
 
   return (
     <React.Fragment>
@@ -19,13 +18,13 @@ function SideBar({navigate}) {
           width: "100%",
         }}
       >
-        <Grid item pt={4} pl={2}>
+        <Grid item pt={4} pl={2} style={{cursor:"pointer"}}>
           {DashboardMenus.map((item) => (
             <Grid
               item
               key={item.link}
-                  py={2.5}
-                   onClick={() => navigate(item.alias)}
+              py={2.5}
+              onClick={() => navigate(item.alias)}
               sx={
                 router.pathname === item.alias
                   ? {
@@ -113,7 +112,6 @@ function SideBar({navigate}) {
             </Grid>
           </Grid>
         </Grid>
-       
       </Grid>
     </React.Fragment>
   );
