@@ -1,4 +1,4 @@
-const User = () => {
+const Assessment = () => {
   return (
     <div style={{ paddingLeft: "100px" }}>
       Submission Round (via Unstop) This will be a submission round! You will
@@ -6,4 +6,4 @@ const User = () => {
     </div>
   );
 };
-export default User;
+export default Assessment;
